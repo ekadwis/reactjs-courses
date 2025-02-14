@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Tutors from '../components/Tutors';
 import Partners from '../components/Partners';
+import Contact from '../components/Contact';
 import { homeSection } from '../data/HomeSection';
 import { coursesSection } from '../data/CoursesSection';
 import { tutorsSection, tutorsList } from '../data/TutorsSection';
@@ -30,19 +31,24 @@ function Home() {
         <section id="tutors">
           <div className="tengah">
             <div className="kolom">{parse(tutorsSection.content)}</div>
-            <Tutors tutorsList={tutorsList}/>
+            <Tutors tutorsList={tutorsList} />
           </div>
         </section>
 
         {/* Partners  */}
         <section id="partners">
-            <div className="tengah">
-                <div className="kolom">
-                    {parse(partnersSection.content)}
-                </div>
-                <Partners partnersList={partnersList} />
-            </div>
+          <div className="tengah">
+            <div className="kolom">{parse(partnersSection.content)}</div>
+            <Partners partnersList={partnersList} />
+          </div>
         </section>
+
+        {/* Contact */}
+        <div id="contact">
+          <div class="wrapper">
+            <Contact />
+          </div>
+        </div>
       </div>
       <Footer />
     </>
